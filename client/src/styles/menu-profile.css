@@ -1,0 +1,186 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f6fb;
+}
+
+/* Основные свойства для бокового меню */
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  background-color: #fff;
+  box-shadow: rgba(115, 113, 153, 0.2) 0px 0px 3px;
+  border-radius: 0px 0px 0px 5px;
+}
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+/* Свойства для контента */
+.content {
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box; /* важно! чтобы padding не влиял на ширину */
+  overflow-x: auto; /* на всякий случай */
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* центрируем логотип с текстом */
+  color: #2e657d;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Задаем псеводоэлемент для иконки */
+.logo:before {
+  padding-right: 8px; /* немного отступим справа */
+}
+
+/* Позиционирование лого в меню */
+.menu__logo {
+  padding-top: 50px;
+  padding-left: 30px;
+  margin-bottom: 59px;
+}
+
+/* Позиционирование элементов в меню */
+.menu__link,
+.admin__link {
+  padding-left: 30px;
+}
+
+/* Свойства для элементов меню */
+.link {
+  position: relative; /* чтобы задать потом псевдоэлемент */
+  display: flex; /* чтобы элемент тянулся на всю ширину */
+  align-items: center; /* по центру текст и иконка */
+  height: 45px; /* высота элемента 45px */
+  text-decoration: none;
+  color: #7cb2ca;
+  cursor: pointer;
+}
+
+.icon-menu {
+  font-size: large;
+}
+
+/* Свойства иконки внутри ссылки */
+.link > img {
+  width: 25px;
+  margin-right: 20px;
+}
+
+/* Свойства текста внутри ссылки */
+.link > span {
+  font-size: 20px;
+  margin: 1em;
+}
+
+/* При наведении на ссылку - полупрозрачный белый фон */
+.link:hover {
+  background-color: rgb(124, 178, 202);
+  color: #fff !important;
+}
+
+/* Выводим оранжевую линию слева */
+.link:hover:before {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.25)
+  );
+  left: 18em;
+  transition: 0.8s ease-in-out;
+}
+
+.link:before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: skewX(-45deg);
+}
+
+/* Позиционирование админ-меню */
+.menu__admin {
+  margin-top: auto;
+  padding-bottom: 40px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.form-user > div {
+  margin: 1em;
+}
+
+label {
+  color: #49555a;
+}
+
+.form-input-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  width: 9em;
+  margin-top: 1em;
+  text-align: end;
+}
+
+.input-with-label {
+  display: flex;
+}
+
+@media (max-width: 855px) {
+  .menu_container{
+    flex-direction: column !important;
+  }
+  .menu {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.5em 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .menu__list,
+  .menu__admin {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu__item {
+    padding: 0.5em;
+  }
+
+  .link > span {
+    font-size: 16px;
+    margin: 0 0.5em;
+  }
+
+  .link > img {
+    margin-right: 10px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .menu__logo {
+    display: none;
+  }
+}

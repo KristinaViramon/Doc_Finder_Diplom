@@ -1,0 +1,29 @@
+.footer {
+    padding: 2em 10em;
+    text-align: center;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    border-top: 1px solid #e7ebef;
+    color: #9db0be;
+    gap: 16px;
+  }
+  
+  .footer-text {
+    display: flex;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    margin-bottom: 10px;
+    text-align: center; /* Центрируем текст */
+  }
+  
+  .footer-contact a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer-contact a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,99 @@
+/* Стиль для раскрывающихся элементов details */
+details {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  background-color: #f5f6fb7a; /* Легкий фон */
+  cursor: pointer;
+}
+
+/* Стиль для заголовка summary внутри details */
+details summary {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  background-color: #7cb2ca; /* Цвет фона для заголовка */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* При наведении меняем цвет фона */
+details summary:hover {
+  background-color: #5f8e99;
+  color: white;
+}
+
+/* Стиль для раскрытого содержимого */
+details[open] {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+/* Стиль для содержимого внутри раскрытого details */
+details[open] .entries-list {
+  padding: 10px;
+}
+
+/* Стиль для записей внутри списка */
+.entries-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.entries-list .entry-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px; /* Ширина плитки */
+  padding: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  background-color: #f5f6fb7a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.entries-list .entry-tile:hover {
+  transform: scale(1.05);
+}
+
+/* Стиль для данных о записи (дата и время) */
+.entries-list .entry-date,
+.entry-time {
+  font-size: 18px; /* Увеличиваем шрифт для выделения */
+  font-weight: bold;
+  color: #07618a;
+  margin: 4px 5px 6px 2px;
+}
+
+/* Стиль для имени врача — делаем менее акцентированным */
+.entries-list .doctor-name {
+  font-size: 14px; /* Уменьшаем размер шрифта */
+  font-weight: normal; /* Убираем жирность */
+  color: #777; /* Более светлый цвет */
+  margin-bottom: 5px;
+}
+.entries-list .doctor-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.entries-list .doctor-tile {
+  flex-direction: column;
+  align-items: start;
+}
+
+.entries-list .doctor-location{
+    font-size: 14px; /* Уменьшаем размер шрифта */
+    font-weight: normal; /* Убираем жирность */
+    color: #777; /* Более светлый цвет */
+    margin-bottom: 5px;
+}
+
+
+

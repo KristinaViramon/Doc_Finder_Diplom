@@ -1,0 +1,18 @@
+.autocomplete-block{
+    list-style-type: none;
+    border: 1px solid rgb(158 163 165);
+    border-radius: 5px;
+    margin: 0;
+    padding: 2px;
+}
+
+.autocomplete-block > li{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.autocomplete-block > li:hover{
+    background-color: rgb(124, 178, 202);
+    color: white;
+    border-radius: 2px;
+}

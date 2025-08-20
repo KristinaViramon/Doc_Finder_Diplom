@@ -1,0 +1,49 @@
+#carousel {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+}
+
+.panel_state {
+  position: absolute;
+  height: 100%;
+  flex: 0 0 100vw;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease, transform 3s ease;
+}
+
+.panel_state_content {
+  display: flex;
+  height: 453px;
+  width: 100%;
+}
+.panel_state.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.panel_state.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.panel_state.active + .panel_state {
+  transform: translateX(100%); /* Следующий слайд появляется справа */
+}
+
+.panel_state.hidden + .panel_state {
+  transform: translateX(-100%); /* Слайд, который ушел, будет скрыт слева */
+}
+
+@media (max-width: 855px) {
+  .panel_state_content {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  
+}

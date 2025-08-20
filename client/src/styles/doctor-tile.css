@@ -1,0 +1,59 @@
+.doctor-tile {
+  display: flex;
+  flex-direction: row; /* Горизонтальное расположение элементов */
+  align-items: center; /* Центрируем по вертикали */
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: 25em; /* Ширина плитки */
+  background-color: #f5f6fb7a;
+}
+
+
+.doctor-photo {
+  width: 103px;
+  height: 140px;
+  border-radius: 3%;
+  object-fit: cover;
+  margin-right: 15px; /* Отступ справа от фото */
+}
+
+.doctor-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.doctor-specialty {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.doctor-experience {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.doctor-description {
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+  max-height: 6em; /* Ограничиваем высоту до 4-6 строк */
+  overflow: hidden; /* Обрезаем лишний текст */
+  text-overflow: ellipsis; /* Добавляем многоточие в конце текста */
+  line-height: 1.5; /* Устанавливаем высоту строки для корректного расчета */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Ограничиваем количество строк */
+  -webkit-box-orient: vertical; /* Ориентируем блок по вертикали */
+}
+
+@media (max-width: 855px) {
+  .doctor-tile {
+    width: auto;
+    max-width: 25em;
+  }
+
+}

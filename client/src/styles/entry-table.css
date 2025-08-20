@@ -1,0 +1,30 @@
+.table-wrapper {
+  width: 100%;
+  max-height: 400px;
+  overflow-x: auto;  /* обязательно горизонтальная прокрутка */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+
+.time-table {
+  width: max-content; /* растёт по содержимому */
+  border-collapse: collapse;
+  min-width: 600px; /* можно оставить или убрать */
+}
+
+
+.time-table th,
+.time-table td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.time-table th {
+  background-color: rgb(186.25, 217.0833333333, 241.25);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

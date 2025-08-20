@@ -1,0 +1,67 @@
+/* Контейнер для всех отзывов */
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Расстояние между отзывами */
+  margin-top: 20px;
+}
+
+/* Раздел для каждого отзыва */
+.review-list .review-section {
+  background-color: #fff;
+  border: 1px solid rgb(186.25, 217.0833333333, 241.25);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: rgba(115, 113, 153, 0.35) 0px 0px 3px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Эффект при наведении на отзыв */
+.review-list .review-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(115, 113, 153, 0.35); /* Увеличиваем тень при наведении */
+}
+
+/* ФИО пациента */
+.review-list .patient-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Дата записи */
+.review-list .entry-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+/* Контейнер для звезд */
+.review-list .review-stars {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* Звезды (цвет и размер) */
+.review-stars span {
+  cursor: pointer;
+  color: #ffd700; /* Цвет звезд */
+}
+
+/* Текст отзыва */
+.review-list .review-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.delete-review-btn {
+  background-color: #7cb2ca;
+  color: white;
+  border: none;
+  padding: 9px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

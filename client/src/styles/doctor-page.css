@@ -1,0 +1,208 @@
+.doctor-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.doctor-page .doctor-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgb(186 217 241 / 18%);
+  border-radius: 8px;
+  box-shadow: rgba(115, 113, 153, 0.35) 0px 0px 3px;
+}
+
+.doctor-page .doctor-photo {
+  width: 200px;
+  height: 100%;
+  border-radius: 3%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.doctor-page .doctor-details {
+  max-width: 700px;
+  padding-left: 20px;
+}
+
+.doctor-page h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.doctor-page p {
+  font-size: 18px;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.doctor-page p strong {
+  font-weight: bold;
+  color: #555;
+}
+
+.doctor-page .doctor-entry {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid rgb(186.25, 217.0833333333, 241.25);
+  border-radius: 8px;
+}
+.doctor-page .doctor-reviews {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid rgb(186.25, 217.0833333333, 241.25);
+  border-radius: 8px;
+}
+.doctor-page .doctor-reviews h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-top: 3px;
+}
+
+.doctor-page .doctor-entry h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-top: 3px;
+}
+
+.doctor-page .doctor-certificates {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid rgb(186.25, 217.0833333333, 241.25);
+  border-radius: 8px;
+}
+
+.doctor-page .doctor-certificates h3 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-top: 3px;
+}
+
+.doctor-page .certificate-images {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(220px, 1fr)
+  ); /* Автоматическое заполнение строк */
+  gap: 20px;
+}
+
+.doctor-page .certificate-item {
+  text-align: center;
+}
+
+.doctor-page .certificate-img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.doctor-page .doctor-certificates a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.doctor-page .doctor-certificates a:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-btn {
+  margin: 0 5px;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-btn.active {
+  background-color: #7cb2ca;
+  color: white;
+}
+
+.page-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.page-btn:focus {
+  outline: none;
+}
+
+.doctor-page .doctor-map {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: rgba(115, 113, 153, 0.35) 0px 0px 3px;
+  margin-top: 20px;
+}
+
+ymaps {
+  border-radius: 8px;
+}
+
+/* Добавьте эти стили в ваш CSS файл */
+.modal {
+  position: fixed; /* Позиционирование поверх контента */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Убедитесь, что модальное окно поверх */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 855px) {
+  .doctor-page .doctor-info {
+    flex-direction: column;
+  }
+}

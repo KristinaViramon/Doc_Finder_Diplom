@@ -1,0 +1,8 @@
+export const PROFILE_ROUTE = '/profile'
+export const LOGIN_ROUTE = '/login'
+export const REGISTRATION_ROUTE = '/registration'
+export const MAIN_ROUTE = '/'
+export const LIST_ROUTE = '/doctor_list'
+export const MAP_ROUTE = '/map'
+export const DOCTOR_ROUTE = '/doctor'
+export const CALENDAR_ROUTE = '/calendar'

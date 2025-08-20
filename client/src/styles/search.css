@@ -1,0 +1,20 @@
+.input-field {
+  border: 1px solid #9ea3a5;
+  border-radius: 0.3em;
+  width: 29em;
+  height: 2.3em;
+  margin: 1em;
+}
+
+.search-filter-icon {
+  color: #2e657d;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+@media (max-width: 855px) {
+  .input-field {
+    width: auto;
+    max-width: 29em;
+  }
+}
