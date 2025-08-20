@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"DESKTOP-CO8KAG0-1052-stdout-1747853862855.txt","computername":"DESKTOP-CO8KAG0","pid":1052,"type":"stdout","created":1747853862855},{"file":"DESKTOP-CO8KAG0-12056-stdout-1747858825290.txt","computername":"DESKTOP-CO8KAG0","pid":12056,"type":"stdout","created":1747858825290},{"file":"DESKTOP-CO8KAG0-12328-stdout-1747853948986.txt","computername":"DESKTOP-CO8KAG0","pid":12328,"type":"stdout","created":1747853948986},{"file":"DESKTOP-CO8KAG0-14728-stderr-1747852312043.txt","computername":"DESKTOP-CO8KAG0","pid":14728,"type":"stderr","created":1747852312043},{"file":"DESKTOP-CO8KAG0-17468-stderr-1747852734105.txt","computername":"DESKTOP-CO8KAG0","pid":17468,"type":"stderr","created":1747852734105},{"file":"DESKTOP-CO8KAG0-20836-stderr-1747859450919.txt","computername":"DESKTOP-CO8KAG0","pid":20836,"type":"stderr","created":1747859450919},{"file":"DESKTOP-CO8KAG0-20836-stdout-1747859450918.txt","computername":"DESKTOP-CO8KAG0","pid":20836,"type":"stdout","created":1747859450918},{"file":"DESKTOP-CO8KAG0-2648-stderr-1747852733274.txt","computername":"DESKTOP-CO8KAG0","pid":2648,"type":"stderr","created":1747852733274},{"file":"DESKTOP-CO8KAG0-4212-stderr-1747852312911.txt","computername":"DESKTOP-CO8KAG0","pid":4212,"type":"stderr","created":1747852312911},{"file":"DESKTOP-CO8KAG0-7540-stderr-1747852114094.txt","computername":"DESKTOP-CO8KAG0","pid":7540,"type":"stderr","created":1747852114094},{"file":"DESKTOP-CO8KAG0-7844-stdout-1747857666942.txt","computername":"DESKTOP-CO8KAG0","pid":7844,"type":"stdout","created":1747857666942},{"file":"DESKTOP-CO8KAG0-9736-stdout-1747853666977.txt","computername":"DESKTOP-CO8KAG0","pid":9736,"type":"stdout","created":1747853666977},{"file":"DESKTOP-CO8KAG0-9808-stderr-1747852114944.txt","computername":"DESKTOP-CO8KAG0","pid":9808,"type":"stderr","created":1747852114944}];
+        var lastUpdated = 1747859495417;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>
